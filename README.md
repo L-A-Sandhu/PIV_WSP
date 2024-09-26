@@ -1,7 +1,7 @@
 # Time Series Forecasting with LSTM and TCN Models
 This project implements a machine learning framework for time series forecasting using Long Short-Term Memory (LSTM) networks and Temporal Convolutional Networks (TCN). The aim is to enhance predictive accuracy through Integrating Physics Informed Vectors as an input and part of loss function. The block diagram of the proposed work is given below 
 ### Block Diagram
-![Block Diagram](path/to/block_diagram.png)
+![Block Diagram](block.png)
 
 ## Table of Contents
 - [Installation](#installation)
@@ -25,44 +25,7 @@ source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 pip install -r requirements.txt
 ## Project Structure
 
-.
-├── 20_Percent
-│   ├── canada_data
-│   │   ├── ...
-│   ├── chilli_data
-│   │   ├── ...
-│   ├── kazakistan
-│   │   ├── ...
-│   └── Mongolia
-│       ├── ...
-├── 50_Percent
-│   ├── canada_data
-│   │   ├── ...
-│   ├── chilli_data
-│   │   ├── ...
-│   ├── kazakistan
-│   │   ├── ...
-│   └── Mongolia
-│       ├── ...
-├── 75_Percent
-│   ├── canada_data
-│   │   ├── ...
-│   ├── chilli_data
-│   │   ├── ...
-│   ├── kazakistan
-│   │   ├── ...
-│   └── Mongolia
-│       ├── ...
-└── All
-│   ├── canada_data
-│   │   ├── ...
-│   ├── chilli_data
-│   │   ├── ...
-│   ├── kazakistan
-│   │   ├── ...
-│   └── Mongolia
-│       ├── ...
-
+. ├── 20_Percent │ ├── canada_data │ ├── chilli_data │ ├── kazakistan │ └── Mongolia ├── 50_Percent │ ├── canada_data │ ├── chilli_data │ ├── kazakistan │ └── Mongolia ├── 75_Percent │ ├── canada_data │ ├── chilli_data │ ├── kazakistan │ └── Mongolia └── All ├── canada_data ├── chilli_data ├── kazakistan └── Mongolia
 ## Running the Project
 1. Navigate to the Desired Dataset Folder: Change directory to the specific dataset folder (e.g., 20_Percent, 50_Percent, or 75_Percent).
 2. Modify Shell Script Parameters (if necessary): Open the corresponding .sh file (e.g., run.sh) and adjust parameters such as NUM_EPOCHS, BATCH_SIZE, and INITIAL_LR as needed.
@@ -71,17 +34,19 @@ bash run.sh
 ## Loss Function 
 ## Loss Function
 The loss function used in this model is defined as follows:
-
-\[ 
-L = \frac{1}{N} \sum_{i=1}^{N} (S_{t+1,i} - \hat{\hat{S}}_{t+1,i})^2 + \lambda_0 e^{-pt} \frac{1}{N} \sum_{i=1}^{N} (\hat{\hat{S}}_{t+1,i} - \hat{S}_{t+1,i})^2 
-\]
+$$
+L = \frac{1}{N} \sum_{i=1}^{N} (S_{t+1,i} - \hat{\hat{S}}_{t+1,i})^2 + \lambda_0 e^{-pt} \frac{1}{N} \sum_{i=1}^{N} (\hat{\hat{S}}_{t+1,i} - \hat{S}_{t+1,i})^2
+$$
 
 Where:
-- \( L \) is the total loss.
-- \( N \) is the number of samples.
-- \( S_{t+1,i} \) is the true value.
-- \( \hat{\hat{S}}_{t+1,i} \) is the predicted value from the current model.
-- \( \lambda_0 \) and \( p \) are hyperparameters controlling the regularization term you can adjust from run.sh.
+- \( \hat{\hat{S}}_{t+1,i} \): Model's predicted wind speed.
+- \( \hat{S}_{t+1,i} \): Estimated wind speed from step 1.
+- \( N \): Number of observations.
+- \( \lambda_0 e^{-pt} \): Controls the contribution of the difference between the model's predictions and the PIV estimates, allowing the model to:
+  - Initially align closely with the PIV estimates.
+  - Reduce the search space as training progresses.
+  - Enable finer adjustments towards the actual wind speed as model parameters are tuned.
+
 
 ## Results
 The proposed integration on different datasets and their subsets has achieved the following performance:
@@ -98,7 +63,7 @@ The proposed integration on different datasets and their subsets has achieved th
 #### R-Squared (R2)
 ![R2 Improvement](./R2.png)
 
-The generated plots illustrate improvements in model performance over iterations. Review these files to understand how the model's accuracy evolves with different configurations.
+The generated plots illustrate improvements in of Proposed PIV model over standard LSTM and TCN models performance in percentages .
 
 ## Publication
 This work has been published in the following conference:
