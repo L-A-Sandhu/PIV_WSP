@@ -113,7 +113,7 @@ This work has been published in the following conference:
 **Year:** 2024  
 **Organization:** IEEE  
 
-You can check out the paper [here]([https://doi.org/10.1109/ASCC52936.2024.00190](https://ieeexplore.ieee.org/abstract/document/10665742)). 
+You can check out the paper [here]([https://doi.org/10.1109/ASCC52936.2024.00190](https://ieeexplore.ieee.org/abstract/document/10665742]). 
 
 If you use this code or any part of it in your research, please cite us as follows:
 
