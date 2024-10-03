@@ -1,7 +1,13 @@
-# Time Series Forecasting with LSTM and TCN Models
-This project implements a machine learning framework for time series forecasting using Long Short-Term Memory (LSTM) networks and Temporal Convolutional Networks (TCN). The aim is to enhance predictive accuracy through Integrating Physics Informed Vectors as an input and part of loss function. The block diagram of the proposed work is given below 
-### Block Diagram
+# Wind Speed Time Series Forecasting with LSTM and TCN Models Using Physics-Informed Vectors
+
+This repository implements a state-of-the-art machine learning framework that integrates **Physics-Informed Vectors (PIV)** with **Long Short-Term Memory (LSTM)** and **Temporal Convolutional Networks (TCN)** for improved wind speed forecasting. The project enhances predictive accuracy by incorporating domain-specific physical knowledge and custom hybrid loss functions.
+
+## Overview of the Proposed Methodology
+
+Below is a block diagram that outlines the framework, including data preprocessing, Physics-Informed Vector computation, and model training using LSTM and TCN architectures:
+
 ![Block Diagram](block.png)
+
 
 ## Table of Contents
 - [Installation](#installation)
@@ -13,10 +19,14 @@ This project implements a machine learning framework for time series forecasting
 - [License](#license)
 
 ## Installation
-1. Clone the repository:
+
+To get started with the project, follow the steps below:
+
+1. **Clone the repository:**
    ```bash
    git clone <repository-url>
    cd <repository-name>
+
 ### Set up a virtual environment
 
 python -m venv venv
@@ -24,6 +34,10 @@ source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
 pip install -r requirements.txt
 ## Project Structure
+
+The following is an overview of the repository's folder structure. The dataset folders (`20_Percent`, `50_Percent`, `75_Percent`, and `All`) contain data from different geographic locations, divided by percentage of available data for performance evaluation.
+
+
 ```
 .
 ├── 20_Percent
