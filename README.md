@@ -88,7 +88,7 @@ bash run.sh
 Our model employs a **custom hybrid loss function** that incorporates **Physics-Informed Vectors (PIV)** and traditional Mean Squared Error (MSE). The PIV term initially has a strong influence on predictions, guiding the model towards physical accuracy, but this influence gradually decays during training.
 
 The loss function is defined as follows:
-![Hybrid Loss Function with Description](./path-to-your-image/complete_hybrid_loss_function_description_fixed.png)
+![Hybrid Loss Function with Description](./complete_hybrid_loss_function_description_fixed.png)
 
 This hybrid loss function improves model convergence and predictive accuracy by initially aligning the model closely with physics-based predictions and later tuning it to focus on data-driven corrections.
 
