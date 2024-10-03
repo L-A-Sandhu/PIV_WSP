@@ -88,18 +88,7 @@ bash run.sh
 Our model employs a **custom hybrid loss function** that incorporates **Physics-Informed Vectors (PIV)** and traditional Mean Squared Error (MSE). The PIV term initially has a strong influence on predictions, guiding the model towards physical accuracy, but this influence gradually decays during training.
 
 The loss function is defined as follows:
-$$
-
-L = \frac{1}{N} \sum_{i=1}^{N} (S_{t+1,i} - \hat{\hat{S}}_{t+1,i})^2 + \lambda_0 e^{-pt} \frac{1}{N} \sum_{i=1}^{N} (\hat{\hat{S}}_{t+1,i} - \hat{S}_{t+1,i})^2
-
-$$
-
-
-Where:
-- \( \hat{\hat{S}}_{t+1,i} \): Model's predicted wind speed.
-- \( \hat{S}_{t+1,i} \): Physics-informed estimated wind speed.
-- \( N \): Number of observations.
-- \( \lambda_0 e^{-pt} \): Decaying term that reduces the PIV influence as training progresses, allowing the model to focus on minimizing prediction errors.
+![Hybrid Loss Function with Description](./path-to-your-image/complete_hybrid_loss_function_description_fixed.png)
 
 This hybrid loss function improves model convergence and predictive accuracy by initially aligning the model closely with physics-based predictions and later tuning it to focus on data-driven corrections.
 
