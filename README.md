@@ -119,7 +119,7 @@ This work has been presented and published at the **2024 14th Asian Control Conf
 **Year:** 2024  
 **Organization:** IEEE  
 **[Link to Paper](https://ieeexplore.ieee.org/abstract/document/10665742)**
-
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=L-A-Sandhu.your_repo_name)
 ### Citation:
 ```bibtex
 @inproceedings{aslam2024integrating,
@@ -129,7 +129,7 @@ This work has been presented and published at the **2024 14th Asian Control Conf
   pages={1902--1907},
   year={2024},
   organization={IEEE}
-![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=L-A-Sandhu.your_repo_name)
+
 
 }
 
