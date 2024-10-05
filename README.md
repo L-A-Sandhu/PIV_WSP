@@ -6,7 +6,7 @@ This repository implements a state-of-the-art machine learning framework that in
 
 Below is a block diagram that outlines the framework, including data preprocessing, Physics-Informed Vector computation, and model training using LSTM and TCN architectures:
 
-![Block Diagram](block.png)
+![Block Diagram](physics informed machine learning.png)
 
 
 ## Table of Contents
