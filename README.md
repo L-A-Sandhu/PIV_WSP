@@ -1,6 +1,6 @@
 # Wind Speed Time Series Forecasting with LSTM and TCN Models Using Physics-Informed Vectors
 
-This repository implements a state-of-the-art machine learning framework that integrates **Physics-Informed Vectors (PIV)** with **Long Short-Term Memory (LSTM)** and **Temporal Convolutional Networks (TCN)** for improved wind speed forecasting. The project enhances predictive accuracy by incorporating domain-specific physical knowledge and custom hybrid loss functions.
+This repository implements a state-of-the-art machine learning framework that integrates **Physics-Informed Vectors (PIV)** with **Long Short-Term Memory (LSTM)** and **Temporal Convolutional Networks (TCN)** for improved wind speed forecasting. The project enhances predictive accuracy by incorporating domain-specific physical knowledge and custom hybrid loss functions as performed in physics informed machine learning.
 
 ## Overview of the Proposed Methodology
 
