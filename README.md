@@ -35,7 +35,7 @@ source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 pip install -r requirements.txt
 ## Project Structure
 
-The following is an overview of the repository's folder structure. The dataset folders (`20_Percent`, `50_Percent`, `75_Percent`, and `All`) contain data from different geographic locations, divided by percentage of available data for performance evaluation.
+The following is an overview of the repository's folder structure. The dataset folders (`20_Percent`, `50_Percent`, `75_Percent`, and `All`) contain data from different geographic location. The data is divided by percentage  to see that the proposed scheme outperform the exixiting methods even if the data is limited.
 
 
 ```
